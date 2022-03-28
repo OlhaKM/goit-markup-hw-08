@@ -1,0 +1,231 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  @include tel {
+    width: 450px;
+    height: 609px;
+  }
+  @include desk {
+    width: 450px;
+    height: 609px;
+  }
+  @include desk {
+    width: 528px;
+    height: 581px;
+  }
+}
+.modal__title {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-one);
+  padding-bottom: 12px;
+}
+.modal-check:checked + .moodal-label > .check-span-block {
+  background-color: var(--acent-one);
+  border: none;
+}
+.modal-check:checked + .moodal-label > .check-icon {
+  fill: #ffffff;
+}
+.block {
+  padding-bottom: 10px;
+}
+.block__title {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  color: var(--text-second);
+  padding-bottom: 4px;
+  letter-spacing: 0.03em;
+}
+.block__imput {
+  outline: none;
+  width: 100%;
+  height: 40px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 12px;
+  padding-left: 42px;
+  border-color: rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  &:focus {
+    border-color: rgba(33, 150, 243, 1);
+  }
+}
+.block__text {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+}
+.block__imput:focus + .wrap-icon {
+  fill: rgba(33, 150, 243, 1);
+}
+.modal-button {
+  border: 0;
+  background: var(--acent-third);
+  color: var(--brand-color-ligth);
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  line-height: 1.87;
+  padding: 10px 55px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.block__text {
+  outline: none;
+  border-color: rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  resize: none;
+  &:focus {
+    border-color: rgba(33, 150, 243, 1);
+  }
+}
+.block-button {
+  display: flex;
+  justify-content: center;
+}
+.block__wrap {
+  position: relative;
+}
+.block__imput--icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.modal-check {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--text-second);
+  @include tab {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+.check-span-block {
+  width: 16px;
+  height: 15px;
+  border: 1px solid rgba(33, 33, 33, 1);
+  border-radius: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-check-span {
+  color: var(--acent-one);
+  text-decoration: underline solid #2196f3;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  margin-left: 2px;
+  @include desk {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    margin-left: 4px;
+  }
+}
+.moodal-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: #757575;
+  @include desk {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+.check-span-block {
+  margin-right: 9px;
+}
+.check-icon {
+  fill: transparent;
+}
+.check {
+  margin-bottom: 30px;
+}
+.modal__btn-close {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--brand-color-ligth);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  justify-content: center;
+  &:hover {
+    fill: var(--acent-one);
+  }
+}

@@ -1,0 +1,91 @@
+.hero {
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero-1x.jpg");
+  background-size: cover;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero-2x.jpg");
+  }
+  @include tab {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero-1x-tab.jpg");
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/hero-2x-tab.jpg");
+    }
+  }
+  @include desk {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero-1x-desk.jpg");
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/hero-2x-desk.jpg");
+    }
+    padding-top: 200px;
+    padding-bottom: 210px;
+  }
+}
+
+.hero__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-block__text {
+  font-style: normal;
+  font-weight: 900;
+  color: var(--brand-color-ligth);
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.61;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 360px;
+  @include desk {
+    font-size: 44px;
+    line-height: 1.36;
+    width: 696px;
+  }
+}
+.hero-block__button {
+  border: 0;
+  background: var(--acent-one);
+  color: var(--brand-color-ligth);
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  line-height: 1.87;
+  padding: 10px 32px;
+  border-radius: 4px;
+}
