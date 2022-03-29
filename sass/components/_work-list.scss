@@ -19,7 +19,11 @@
   }
 }
 .works {
+  display: none;
   padding-bottom: 94px;
+  @include desk {
+    display: initial;
+  }
 }
 .works-list__wrap {
   position: relative;
