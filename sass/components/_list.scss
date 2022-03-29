@@ -19,7 +19,7 @@
 }
 .list-block__item {
   @include tab {
-    width: calc(100% / 2 -30px);
+    width: calc(100% / 2 - 30px);
     margin-left: 30px;
   }
   @include desk {
