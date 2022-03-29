@@ -6,7 +6,10 @@
 }
 .header-block {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  @include desk {
+    align-items: center;
+  }
 }
 .logo-block {
   color: var(--acent-one);
@@ -105,6 +108,10 @@ li {
 .menu-mob__icon-open {
   width: 24px;
   height: 16px;
+  &:hover,
+  &:focus {
+    fill: var(--acent-one);
+  }
   @include desk {
     display: none;
   }
@@ -112,4 +119,8 @@ li {
 .menu-mob__icon {
   width: 19px;
   height: 19px;
+  &:hover,
+  &:focus {
+    fill: var(--acent-one);
+  }
 }
