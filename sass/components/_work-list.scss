@@ -20,9 +20,9 @@
 }
 .works {
   display: none;
-  padding-bottom: 94px;
   @include desk {
     display: initial;
+    padding-bottom: 94px;
   }
 }
 .works-list__wrap {

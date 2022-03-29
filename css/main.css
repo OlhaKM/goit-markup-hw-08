@@ -160,7 +160,6 @@ a {
     bottom: -28px;
     background-color: var(--acent-one);
     border-radius: 2px;
-    margin-right: 50px;
   }
 }
 
@@ -607,12 +606,12 @@ li {
 
 .works {
   display: none;
-  padding-bottom: 94px;
 }
 
 @media screen and (min-width: 1200px) {
   .works {
     display: initial;
+    padding-bottom: 94px;
   }
 }
 
