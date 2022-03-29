@@ -93,7 +93,7 @@ a {
   display: none;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .navigation {
     display: initial;
   }
@@ -145,7 +145,7 @@ a {
   display: none;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .main-contacts {
     display: initial;
     margin-left: auto;
@@ -196,6 +196,7 @@ li {
   height: 100vh;
   top: 0;
   left: 0;
+  padding: 48px 40px;
 }
 
 .menu-mob__icon-open {
@@ -207,10 +208,18 @@ li {
   fill: var(--acent-one);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .menu-mob__icon-open {
     display: none;
   }
+}
+
+.menu-mob__close-btn {
+  display: block;
+  margin-left: auto;
+  position: absolute;
+  top: 21px;
+  right: 25px;
 }
 
 .menu-mob__icon {
@@ -220,6 +229,73 @@ li {
 
 .menu-mob__icon:hover, .menu-mob__icon:focus {
   fill: var(--acent-one);
+}
+
+.mobile-nav-block__item {
+  text-decoration: none;
+  color: #212121;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav-block__item:hover, .mobile-nav-block__item:focus {
+  color: var(--acent-one);
+}
+
+.mobile-nav-block__block {
+  margin-bottom: 32px;
+}
+
+.mobile-nav-block__block:last-child {
+  margin-bottom: 0;
+}
+
+.mobile-contacts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 306px;
+  margin-bottom: 64px;
+}
+
+.mobile-contacts__phone {
+  text-decoration: none;
+  color: var(--acent-one);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+}
+
+.mobile-contacts__mail {
+  text-decoration: none;
+  color: var(--text-second);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+}
+
+.mobile-sicials__link {
+  text-decoration: none;
+  color: var(--acent-one);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}
+
+.mobile-sicials__list {
+  display: flex;
 }
 
 .hero {
