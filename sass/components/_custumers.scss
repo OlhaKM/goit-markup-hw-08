@@ -1,21 +1,44 @@
 .custumers {
   color: var(--background-color);
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desk {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .custumers-list {
+  margin-bottom: -30px;
   display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+  @include desk {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 }
 .custumers-list__item {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
+  @include tel {
+    width: calc(100% / 2-30px);
+    margin-left: 30px;
+  }
+  @include tab {
+    width: calc(100% / 2-30px);
+    margin-left: 30px;
+  }
 }
 
 .custumers-list__link {
-  width: 170px;
   width: 210px;
   height: 92px;
   fill: var(--border-color);
@@ -29,5 +52,8 @@
   &:focus {
     fill: var(--acent-one);
     border: 1px solid var(--acent-one);
+  }
+  @include desk {
+    width: 170px;
   }
 }

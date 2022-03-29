@@ -103,7 +103,12 @@ li {
   margin-right: 10px;
 }
 .menu-mob {
+  position: absolute;
   background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
 }
 .menu-mob__icon-open {
   width: 24px;
