@@ -1,12 +1,23 @@
 .header {
   background-color: var(--brand-color-ligth);
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #ececec;
+  @include tab {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @include desk {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 .header-block {
   display: flex;
   justify-content: space-between;
+  @include tab {
+    align-items: center;
+  }
   @include desk {
     align-items: center;
   }
@@ -34,6 +45,7 @@
 }
 .navigation-block {
   display: flex;
+  justify-content: center;
 }
 .navigation-block__item {
   text-decoration: none;
@@ -41,43 +53,72 @@
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
+  margin-right: 50px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  margin-right: 50px;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .navigation-block__item--current {
-  position: relative;
-  color: var(--acent-one);
-  &::after {
-    content: "";
-    width: 100%;
-    height: 4px;
-    position: absolute;
-    left: 0;
-    bottom: -32px;
-    background-color: var(--acent-one);
-    border-radius: 2px;
+  @include tab {
+    position: relative;
+    color: var(--acent-one);
+    &::after {
+      content: "";
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      left: 0;
+      bottom: -28px;
+      background-color: var(--acent-one);
+      border-radius: 2px;
+      margin-right: 50px;
+    }
+  }
+  @include desk {
+    position: relative;
+    color: var(--acent-one);
+    &::after {
+      content: "";
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      left: 0;
+      bottom: -28px;
+      background-color: var(--acent-one);
+      border-radius: 2px;
+    }
   }
 }
 .main-contacts {
   display: none;
   @include tab {
     display: initial;
-    margin-left: auto;
   }
 }
+.main-contacts__list {
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include desk {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
 .main-contacts__item {
   display: none;
   @include tab {
-    display: flex;
-    align-items: baseline;
-    flex-direction: row;
+    display: inline;
   }
 }
 .main-contacts__mail {
+  @include tab {
+    margin-right: 0;
+  }
   @include desk {
     margin-right: 50px;
   }
