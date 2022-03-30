@@ -21,7 +21,7 @@
 .works {
   display: none;
   @include desk {
-    display: initial;
+    display: block;
     padding-bottom: 94px;
   }
 }
