@@ -70,8 +70,8 @@ a {
 
 @media screen and (min-width: 768px) {
   .header {
-    padding-top: 26px;
-    padding-bottom: 26px;
+    padding-top: 21px;
+    padding-bottom: 21px;
   }
 }
 
@@ -170,7 +170,7 @@ a {
     height: 4px;
     position: absolute;
     left: 0;
-    bottom: -28px;
+    bottom: -32px;
     background-color: var(--acent-one);
     border-radius: 2px;
   }
@@ -182,7 +182,8 @@ a {
 
 @media screen and (min-width: 768px) {
   .main-contacts {
-    display: initial;
+    display: block;
+    margin-left: auto;
   }
 }
 
@@ -294,9 +295,6 @@ li {
 .menu-mob__icon-open {
   width: 24px;
   height: 16px;
-  border: 0;
-  background-color: none;
-  padding: 0;
   cursor: pointer;
 }
 
@@ -306,6 +304,18 @@ li {
 
 @media screen and (min-width: 768px) {
   .menu-mob__icon-open {
+    display: none;
+  }
+}
+
+.menu-mob__open-btn {
+  border: 0;
+  background-color: none;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-mob__open-btn {
     display: none;
   }
 }
@@ -1015,8 +1025,15 @@ li {
 }
 
 .gallery {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .menu-nav {
@@ -1025,7 +1042,7 @@ li {
   margin-bottom: 25px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .menu-nav {
     margin-bottom: 30px;
     justify-content: center;

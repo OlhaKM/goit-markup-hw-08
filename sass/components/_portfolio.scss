@@ -122,14 +122,18 @@
 }
 
 .gallery {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desk {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .menu-nav {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 25px;
-  @include desk {
+  @include tab {
     margin-bottom: 30px;
     justify-content: center;
     flex-wrap: nowrap;
