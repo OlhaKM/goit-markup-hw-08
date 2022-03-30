@@ -310,7 +310,7 @@ li {
 
 .menu-mob__open-btn {
   border: 0;
-  background-color: none;
+  background-color: transparent;
   padding: 0;
 }
 
