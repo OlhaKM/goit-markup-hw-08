@@ -89,6 +89,7 @@ a {
 
 @media screen and (min-width: 768px) {
   .header-block {
+    justify-content: baseline;
     align-items: center;
   }
 }
@@ -119,8 +120,16 @@ a {
   }
 }
 
-.header-block__logo {
-  margin-right: 93px;
+@media screen and (min-width: 768px) {
+  .header-block__logo {
+    margin-right: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-block__logo {
+    margin-right: 93px;
+  }
 }
 
 .logo-block__header {
@@ -201,6 +210,7 @@ a {
   .main-contacts__list {
     display: flex;
     flex-wrap: nowrap;
+    justify-content: baseline;
   }
 }
 
@@ -214,15 +224,15 @@ a {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .main-contacts__mail {
-    margin-right: 0;
+@media screen and (min-width: 1200px) {
+  .main-contacts__item {
+    margin-right: 30px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .main-contacts__mail {
-    margin-right: 50px;
+    margin-bottom: 10px;
   }
 }
 
@@ -282,18 +292,25 @@ li {
 }
 
 .menu-mob {
-  position: absolute;
+  position: fixed;
   background-color: #ffffff;
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
   padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .menu-mob__icon-open {
   width: 24px;
   height: 16px;
+  border: 0;
+  background-color: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .menu-mob__icon-open:hover, .menu-mob__icon-open:focus {
@@ -312,6 +329,10 @@ li {
   position: absolute;
   top: 21px;
   right: 25px;
+  border: 0;
+  background-color: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .menu-mob__icon {
@@ -351,7 +372,7 @@ li {
 .mobile-contacts {
   display: flex;
   flex-direction: column;
-  margin-top: 306px;
+  margin-top: 32px;
   margin-bottom: 64px;
 }
 
@@ -788,10 +809,19 @@ li {
 }
 
 .custumers-list {
-  margin-bottom: -30px;
   display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-bottom: -30px;
+}
+
+@media screen and (min-width: 480px) {
+  .custumers-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -30px;
+  }
 }
 
 @media screen and (min-width: 768px) {

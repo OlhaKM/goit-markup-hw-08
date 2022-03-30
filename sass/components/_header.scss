@@ -16,6 +16,7 @@
   display: flex;
   justify-content: space-between;
   @include tab {
+    justify-content: baseline;
     align-items: center;
   }
   @include desk {
@@ -38,7 +39,12 @@
   }
 }
 .header-block__logo {
-  margin-right: 93px;
+  @include tab {
+    margin-right: 88px;
+  }
+  @include desk {
+    margin-right: 93px;
+  }
 }
 .logo-block__header {
   color: var(--acent-second);
@@ -105,6 +111,7 @@
   @include desk {
     display: flex;
     flex-wrap: nowrap;
+    justify-content: baseline;
   }
 }
 
@@ -113,13 +120,13 @@
   @include tab {
     display: inline;
   }
+  @include desk {
+    margin-right: 30px;
+  }
 }
 .main-contacts__mail {
   @include tab {
-    margin-right: 0;
-  }
-  @include desk {
-    margin-right: 50px;
+    margin-bottom: 10px;
   }
 }
 .main-menu-item:hover,
@@ -163,17 +170,24 @@ li {
   }
 }
 .menu-mob {
-  position: absolute;
+  position: fixed;
   background-color: #ffffff;
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
   padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .menu-mob__icon-open {
   width: 24px;
   height: 16px;
+  border: 0;
+  background-color: none;
+  padding: 0;
+  cursor: pointer;
   &:hover,
   &:focus {
     fill: var(--acent-one);
@@ -188,6 +202,10 @@ li {
   position: absolute;
   top: 21px;
   right: 25px;
+  border: 0;
+  background-color: none;
+  padding: 0;
+  cursor: pointer;
 }
 .menu-mob__icon {
   width: 19px;
@@ -222,7 +240,7 @@ li {
 .mobile-contacts {
   display: flex;
   flex-direction: column;
-  margin-top: 306px;
+  margin-top: 32px;
   margin-bottom: 64px;
 }
 .mobile-contacts__phone {
