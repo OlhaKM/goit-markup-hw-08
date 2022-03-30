@@ -173,14 +173,19 @@ li {
 .menu-mob__icon-open {
   width: 24px;
   height: 16px;
-  border: 0;
-  background-color: none;
-  padding: 0;
   cursor: pointer;
   &:hover,
   &:focus {
     fill: var(--acent-one);
   }
+  @include tab {
+    display: none;
+  }
+}
+.menu-mob__open-btn {
+  border: 0;
+  background-color: none;
+  padding: 0;
   @include tab {
     display: none;
   }
